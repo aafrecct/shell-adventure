@@ -1,0 +1,21 @@
+name: Entrace
+dir_name: entrance,
+desc: The first room, teaches `cd`
+narrative:
+  es: >
+    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
+    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
+    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
+    siguiente habitación.
+  en: >
+    You find yourself in a dark room, the dungeon emanates a weird aura, a
+    smell of seaweed seeps through the floor. There's a door to your left,
+    ajar. To go through please type `cd first_room`.
+    },
+leads_to: 
+  - dirname: first_room
+    hidden: false
+    locked: false
+  - dirname: large_room
+    hidden: false
+    locked: false

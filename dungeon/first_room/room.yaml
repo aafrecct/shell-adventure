@@ -1,0 +1,13 @@
+name: Fountain Room
+dir_name: first_room,
+desc: Teaches `cd ..` 
+narrative:
+  es: >
+    "Entras en una sala pequeña con una fuente en una esquina, y varios 
+    jarrones en el suelo, muchos rotos. No parece que aquí haya nada, pero 
+    puedes mirar todo lo que hay en la sala usando `ls`. Si quieres volver a
+    la sala anterior siempre puedes hacerlo con `cd ..`."
+  en: >
+    "Behind the door theres a small room with a water fountain in one of the
+    corners. There are also several vases on the floor, many of them broken.
+    You can see everything there's on the room typing `ls`."

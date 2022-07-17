@@ -1,0 +1,18 @@
+dungeon:
+- entrance:
+  - first_room
+  - large_room: 
+    - lone_room
+    - stand_room
+    - weight_room:
+        - empty_hallway:
+          - a_dead_end
+- second_floor:
+  - lock_room_1:
+    - anteroom:
+      - lock_room_2
+      - weird_altar_room:
+        - portal_room
+- a_dark_room:
+  - the_sword_room:
+    - boss_room
