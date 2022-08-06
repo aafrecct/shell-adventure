@@ -1,21 +1,26 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: lone_room
+dir_name: 
+  es: sala_solitaria
+  en: lone_room
+desc: Teaches about executable files.
 narrative:
   es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
+    "En la oscuridad esta sala parece vacía, aunque un ladrillo sobresale al
+    final. La sala está en un silencio absoluto, al contrario que las
+    anteriores, aquí no se oye un goteo constante de agua.
+
+    Pista: Algunas cosas se pueden |h|usar|. Para probar a usar algo en general
+    puedes hacer `./<objeto>`."
   en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+    "In the darkness it's hard to make out anything in this room, yet you
+    notice a brick sticking out of the wall. The room is in absolute silence,
+    not even the constant waterdrops that could be heard in the previous ones.
+
+    Hint: Some things can be |h|used|. You can try to use something by typing
+    `./<something>`."
+items:
+  brick.nim:
+    name:
+      es: ladrillo
+      en: brick
+    make: "nim c -o:{name} brick.nim"

@@ -1,5 +1,7 @@
-name: Large Room
-dir_name: large_room,
+id: large_room
+dir_name:
+  es: "sala_grande"
+  en: "large_room"
 desc: Teaches `less` and locked doors.
 narrative:
   es: >

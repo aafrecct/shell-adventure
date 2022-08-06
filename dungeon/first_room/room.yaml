@@ -1,5 +1,7 @@
-name: Fountain Room
-dir_name: first_room,
+id: first_room
+dir_name: 
+  es: "sala_fuente"
+  en: "fountain_room"
 desc: Teaches `cd ..` 
 narrative:
   es: >

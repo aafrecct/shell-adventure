@@ -1,21 +1,30 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: stand_room 
+dir_name: 
+  es: sala_atril 
+  en: lectern_room
+desc: Teaches `touch`
 narrative:
   es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
+    "Esta sala esta ligeramente más iluminada, un farol cuelga del techo y
+    brilla misteriosamente, la vela de dentro a medio consumir. Contra la pared
+    opuesta hay un atril vacio y otro ladrillo que sobresale.
+    
+    Si quieres crear un libro que poner encima del atril, puedes hacerlo con
+    `touch libro`. El libro estará vacío eso sí."
   en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+    "A lantern hangs from the ceiling of this room, making it seem brighter
+    than the others. The candle inside is only consumed halfway but there are
+    no signs of anyone that could have lightened it. On the other side of the
+    room theres a lectern and another misplaced brick.
+
+    You can create an empty book by typing `touch book`."
+items:
+  lectern:
+    name:
+      es: "atril"
+      en: "lectern"
+  brick.nim:
+    name:
+      es: ladrillo
+      en: brick
+    make: "nim c -o:{name} brick.nim"

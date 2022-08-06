@@ -1,21 +1,40 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: empty_hallway
+dir_name: 
+  es: pasillo_vacio
+  en: empty_hallway
+desc: Teaches `ls -a`, `pwd` and `clear`
 narrative:
   es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
+    "Entras en un pasillo largo por lo que parece la única puerta de entrada.
+    El pasillo esta iluminado por candelabros a ambos lados, pero no hay
+    ningún rastro de alguien que pudiera haberlos encendido.
+
+    Quizás sea un buen momento para descansar. Puedes escribir `clear` para
+    limpiar tu pantalla. Si necesitas acordarte del camino que has cogido para
+    llegar aquí puedes escribir `pwd`.
+    
+    Como parte de este minijuego, puedes usar un comando propio `journal`, para
+    revisar lo que has aprendiendo hasta ahora.
+
+    Cuando quieras continuar, a lo mejor merece la pena buscar cosas |h|ocultas|
+    en este pasillo. Para mostrar todos los items, escondidos o no, de una 
+    habitación puedes usar `ls -a`."
   en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
+    "You enter a long empty hallway with no doors other than this one. It's lit 
+    by candles on both walls and yet there's no trace of anyone that could've 
+    lit them.
+    
+    Perhaps now it's a good moment to take a break, you can use `clear` to 
+    remove everything on your screen. If you forget the path you've taken here,
+    you can always print your working directory (`pwd`).
+
+    Only as a part of this minigame, you can also check the things you've 
+    learnt using `journal`.
+
+    Whenever you wanna continue, you may want to check for hidden things in
+    this room. You can do that with `ls -a`."
 leads_to: 
-  - dirname: first_room
-    hidden: false
+  a_dead_end:
+    hidden: true
     locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+

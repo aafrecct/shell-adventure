@@ -1,16 +1,19 @@
-name: Entrance
-dir_name: entrance,
+id: entrance
+dir_name: 
+  es: "entrada"
+  en: "entrance"
 desc: Teaches `cd` and `cat` 
 narrative:
   es: >
-    "Entras en una sala pequeña con una fuente en una esquina, y varios 
-    jarrones en el suelo, muchos rotos. No parece que aquí haya nada, pero 
-    puedes mirar todo lo que hay en la sala usando `ls`. Si quieres volver a
-    la sala anterior siempre puedes hacerlo con `cd ..`."
+    "Te encuentras en una sala pequeña con paredes de piedra y suelo de madera,
+    a tu derecha hay una puerta entreabierta. Un olor a humedad y algas se
+    cuela entre las tablas del suelo. Para investigar la sala a tu derecha
+    escribe: `cd first_room`."
   en: >
-    "Behind the door theres a small room with a water fountain in one of the
-    corners. There are also several vases on the floor, many of them broken.
-    You can see everything there's on the room typing `ls`."
+    "You find yourself in a small room with cobblestone walls and an old wooden
+    floor, a musty smell seeps though the cracks in the floor, almost of rotten
+    fish. There's a door to your left, ajar, to go through to the next room,
+    type: `cd first_room`."
 leads_to:
   first_room:
     locked: false
