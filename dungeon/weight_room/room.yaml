@@ -1,11 +1,13 @@
 id: weight_room
 dir_name: 
-  es: sala_balanza
-  en: scales_room
+  es: "sala_balanza"
+  en: "scales_room"
 desc: Teaches `ls -l` and the use of editors (nano, vim)
+hidden: false
+locked: true
 narrative:
-  es: >
-    "Esta habitación parece identica a la sala del atril pero en la pared
+  es: |
+    Esta habitación parece identica a la sala del atril pero en la pared
     opuesta hay una puerta, parece cerrada.
 
     Si quieres ver más detalles sobre las cosas que hay en la sala, puedes
@@ -13,30 +15,37 @@ narrative:
     puerta cerrada y una puerta abierta.
 
     Además, en el centro de la habitación hay una balanza, no parece que un
-    objeto |h|vacío| vaya a ayudar esta vez. Necesitamos algo que |h|pese|.
-    
+    objeto vacío vaya a ser de ayuda esta vez. Necesitamos algo que pese.
+
     Prueba a usar tu editor de texto para crear algo. Puedes usar el editor de
     texto que quieras, pero mejor si no sales de la terminal. 
 
     (Si no sabes qué hacer, o estas a punto buscar Word, prueba a escribir 
-    `nano` o `vi` o `vim`, suerte aprendiendo a utilizarlos.)"
-  en: >
-    "This room seems identical to the lectern one but there's an apparently
+    `nano` o `vi` o `vim`, suerte aprendiendo a utilizarlos.)
+  en: |
+    This room seems identical to the lectern one but there''s an apparently
     closed door in the wall in front of you.
 
     You can see more details about the items in a room by typing `ln -l`. Try
     to figure out the difference between a closed door and an open one.
 
-    There is also an old scale in the middle of the room, an |h|empty| item
-    won't get the job done this time. You're gonna need something |h|larger|.
+    There is also an old scale in the middle of the room, an empty item
+    won't get the job done this time. You''re gonna need something larger.
 
     Maybe you can use your favourite text editor to create something. Try to 
     use something from the terminal.
 
     (If you have no clue what to do, you can try typing `nano` or `vi` or 
-    `vim`, good luck figuring them out.)"
-leads_to: 
-  empty_hallway:
-    hidden: false
-    locked: true
-
+    `vim`, good luck figuring them out.)'
+items:
+  scales:
+    name:
+      es: balanza
+      en: scales
+    kind: copy
+  brick:
+    name:
+      es: ladrillo
+      en: brick
+    kind: make
+    instr: "nim c -o:brick brick.nim"

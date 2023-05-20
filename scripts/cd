@@ -1,0 +1,13 @@
+#!/bin/bash
+
+if [ $# -eq 0 ]; then
+  >&2 echo "No leaving the dungeon"
+else
+  cd $1
+  room_name="${PWD##*/}"
+  ran_once=$(eval "\$SHELL_ADVENTURE_$room_name")
+  if [ $ran_once -eq 0 ]; then 
+      source $SHELL_ADVENTURE_SCRIPTS/rooms/$room_name.sh
+      export "SHELL_ADVENTURE_$room_name"=1
+  fi
+fi

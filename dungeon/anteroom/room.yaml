@@ -1,21 +1,24 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: anteroom
+dir_name:
+  es: "antesala"
+  en: "anteroom"
+desc: A separating room, a pause
+hidden: false
+locked: false
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Estas en una antesala con una gran puerta. Esta sala parecere conectar
+    dos salas identicas. Puedes aprovechar para tomarte una pausa.
+    Si quieres ver todo lo que has hecho hasta ahora puedes utilizar el 
+    comando `history`.
+  en: |
+    You're in an anteroom of sorts, leading to a large door. It also seems
+    to join two identical rooms. You can take this chance to look back on
+    what led you here, to do this, use `history`.
+items: 
+  brick:
+    name:
+      es: ladrillo
+      en: brick
+    kind: make
+    make: "nim c -o:brink brink.nim"

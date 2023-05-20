@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+if [ "$SHELL_ADVENTURE_LANG" -eq "es" ]; then
+  words="concha mar oceano algas sal arena pez cangrejo niebla orilla"
+else  
+  words="shell sea ocean seaweed salt sand fish crab mist fog"
+fi
+
+for word in $words; do
+  if [ $[$RANDOM % 2] == 0 ]; then
+    echo $word
+  fi
+done

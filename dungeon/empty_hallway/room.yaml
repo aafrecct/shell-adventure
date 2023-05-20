@@ -1,11 +1,13 @@
 id: empty_hallway
 dir_name: 
-  es: pasillo_vacio
-  en: empty_hallway
-desc: Teaches `ls -a`, `pwd` and `clear`
+  es: "pasillo_vacio"
+  en: "empty_hallway"
+desc: Not ominous
+hidden: false
+locked: true
 narrative:
-  es: >
-    "Entras en un pasillo largo por lo que parece la única puerta de entrada.
+  es: |
+    Entras en un pasillo largo por lo que parece la única puerta de entrada.
     El pasillo esta iluminado por candelabros a ambos lados, pero no hay
     ningún rastro de alguien que pudiera haberlos encendido.
 
@@ -13,14 +15,11 @@ narrative:
     limpiar tu pantalla. Si necesitas acordarte del camino que has cogido para
     llegar aquí puedes escribir `pwd`.
     
-    Como parte de este minijuego, puedes usar un comando propio `journal`, para
-    revisar lo que has aprendiendo hasta ahora.
-
-    Cuando quieras continuar, a lo mejor merece la pena buscar cosas |h|ocultas|
+    Cuando quieras continuar, a lo mejor merece la pena buscar cosas ocultas
     en este pasillo. Para mostrar todos los items, escondidos o no, de una 
-    habitación puedes usar `ls -a`."
-  en: >
-    "You enter a long empty hallway with no doors other than this one. It's lit 
+    habitación puedes usar `ls -a`
+  en: |
+    You enter a long empty hallway with no doors other than this one. It's lit 
     by candles on both walls and yet there's no trace of anyone that could've 
     lit them.
     
@@ -28,13 +27,6 @@ narrative:
     remove everything on your screen. If you forget the path you've taken here,
     you can always print your working directory (`pwd`).
 
-    Only as a part of this minigame, you can also check the things you've 
-    learnt using `journal`.
-
     Whenever you wanna continue, you may want to check for hidden things in
-    this room. You can do that with `ls -a`."
-leads_to: 
-  a_dead_end:
-    hidden: true
-    locked: false
-
+    this room. You can do that with `ls -a`.
+items: {}

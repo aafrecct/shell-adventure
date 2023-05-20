@@ -1,26 +1,30 @@
 id: lone_room
 dir_name: 
-  es: sala_solitaria
-  en: lone_room
+  es: "sala_solitaria"
+  en: "lone_room"
 desc: Teaches about executable files.
+hidden: false
+locked: false
 narrative:
-  es: >
-    "En la oscuridad esta sala parece vacía, aunque un ladrillo sobresale al
+  es: |
+    En la oscuridad esta sala parece vacía, aunque un ladrillo sobresale al
     final. La sala está en un silencio absoluto, al contrario que las
     anteriores, aquí no se oye un goteo constante de agua.
 
-    Pista: Algunas cosas se pueden |h|usar|. Para probar a usar algo en general
-    puedes hacer `./<objeto>`."
-  en: >
-    "In the darkness it's hard to make out anything in this room, yet you
+    Pista: Algunas cosas se pueden usar. Para probar a usar algo en general
+    puedes hacer `./<objeto>`.
+
+  en: |
+    In the darkness it's hard to make out anything in this room, yet you
     notice a brick sticking out of the wall. The room is in absolute silence,
     not even the constant waterdrops that could be heard in the previous ones.
 
-    Hint: Some things can be |h|used|. You can try to use something by typing
-    `./<something>`."
+    Hint: Some things can be used. You can try to use something by typing
+    `./<something>`.
 items:
-  brick.nim:
+  brick:
     name:
       es: ladrillo
       en: brick
-    make: "nim c -o:{name} brick.nim"
+    kind: make
+    instr: "nim c -o:brick brick.nim"

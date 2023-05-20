@@ -1,21 +1,30 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: the_sword_room
+dir_name:
+  es: "la_habitacion_de_la_espada"
+  en: "the_sword_room"
+desc:  All stories are re-tellings of older stories
+hidden: false
+locked: true
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Todas la historias son adaptaciones de otras historias.
+    Una espada yace, semi-enterrada en el suelo, enfrente de ti.
+    Solo su verdadero dueño o dueña puede desenterrarla. ¿Serás tú?
+    Puedes cambiar el dueño de un archivo con el comando `chown` pero puede
+    que tengas que hacer de administrador para ello. Puedes obtener permisos
+    de root temporalmente usando `sudo` antes del comando.
+  en: |
+    All stories are, in fact, re-tellings of older stories.
+    In front of you, lies a sword, burried in the ground.
+    Only it's true owner can get it out, are you?
+    You can change ownership of file with `chown` but you might have to
+    impersonate the root user. You can do that with `sudo` if you're in
+    the sudoers file.
+items:
+  sword:
+    name:
+      es: espada
+      en: sword
+    kind: make
+    instr: "nim c -o:sword sword.nim && chmod 744 sword && chown root:root sword"
+

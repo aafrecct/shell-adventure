@@ -3,21 +3,17 @@ dir_name:
   es: "entrada"
   en: "entrance"
 desc: Teaches `cd` and `cat` 
+hidden: false
+locked: false
 narrative:
-  es: >
-    "Te encuentras en una sala pequeña con paredes de piedra y suelo de madera,
+  es: | 
+    Te encuentras en una sala pequeña con paredes de piedra y suelo de madera,
     a tu derecha hay una puerta entreabierta. Un olor a humedad y algas se
     cuela entre las tablas del suelo. Para investigar la sala a tu derecha
-    escribe: `cd first_room`."
-  en: >
-    "You find yourself in a small room with cobblestone walls and an old wooden
+    escribe: `cd first_room`.
+  en: | 
+    You find yourself in a small room with cobblestone walls and an old wooden
     floor, a musty smell seeps though the cracks in the floor, almost of rotten
     fish. There's a door to your left, ajar, to go through to the next room,
-    type: `cd first_room`."
-leads_to:
-  first_room:
-    locked: false
-    hidden: false
-  large_room:
-    locked: false
-    hidden: false
+    type: `cd first_room`.
+items: {}

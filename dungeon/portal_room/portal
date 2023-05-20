@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+    room_name="una_habitacion_oscura"
+else
+    room_name="a_dark_room"
+fi
+
+cd $SHELL_ADVENTURE_ROOT/locked/$room_name

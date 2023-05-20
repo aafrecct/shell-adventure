@@ -1,9 +1,25 @@
 import std/os
 
-let currentRoom = splitPath(getCurrentDir()).tail
+var 
+  expectedCurrentRoom: string
+  nextRoomDir: string
+  successText: string
+  failText: string
+  currentRoom: string = splitPath(getCurrentDir()).tail
 
-if currentRoom == "lone_room":
-  let standRoomDir = "../stand_room"
+if getEnv("DUNGEON_LANG", "es") == "es":
+  expectedCurrentRoom = "sala_solitaria"
+  nextRoomDir = "../sala_atril"
+  successText = "Se oye un *click* en la habitación de al lado."
+  failText = "El ladrillo no está en esta habitación."
+else:
+  expectedCurrentRoom = "lone_room"
+  nextRoomDir = "../stand_room"
+  successText = "You hear a click coming from the other room."
+  failText = "The brick is not in this room."
+
+
+if currentRoom == expectedCurrentRoom:
   let openPermissions = {
     FilePermission.fpUserExec,
     FilePermission.fpUserWrite,
@@ -14,15 +30,8 @@ if currentRoom == "lone_room":
     FilePermission.fpOthersRead
   }
 
-  setFilePermissions(standRoomDir, openPermissions)
+  setFilePermissions(nextRoomDir, openPermissions)
   
-  if getEnv("DUNGEON_LANG", "ES") == "ES":
-    echo "Se oye un *click* en la habitación de al lado."
-  else:
-    echo "You hear a click coming from the other room."
-
+  echo successText
 else:
-  if getEnv("DUNGEON_LANG", "ES") == "ES":
-    echo "El ladrillo no está en esta habitación."
-  else:
-    echo "The brick is not in this room."
+  echo failText

@@ -1,0 +1,11 @@
+id: locked
+dir_name: 
+  es: "cerrado"
+  en: "locked"
+desc: This room gets locked when entering the dungeon
+hidden: false
+locked: false
+narrative:
+  es: ""
+  en: ""
+items: {}

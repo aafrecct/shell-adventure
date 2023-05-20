@@ -1,30 +1,34 @@
 id: stand_room 
 dir_name: 
-  es: sala_atril 
-  en: lectern_room
+  es: "sala_atril" 
+  en: "lectern_room"
 desc: Teaches `touch`
+hidden: false
+locked: true
 narrative:
-  es: >
-    "Esta sala esta ligeramente más iluminada, un farol cuelga del techo y
+  es: |
+    Esta sala esta ligeramente más iluminada, un farol cuelga del techo y
     brilla misteriosamente, la vela de dentro a medio consumir. Contra la pared
     opuesta hay un atril vacio y otro ladrillo que sobresale.
-    
+
     Si quieres crear un libro que poner encima del atril, puedes hacerlo con
-    `touch libro`. El libro estará vacío eso sí."
-  en: >
-    "A lantern hangs from the ceiling of this room, making it seem brighter
+    `touch libro`. El libro estará vacío eso sí.  
+  en: |
+    A lantern hangs from the ceiling of this room, making it seem brighter
     than the others. The candle inside is only consumed halfway but there are
     no signs of anyone that could have lightened it. On the other side of the
     room theres a lectern and another misplaced brick.
 
-    You can create an empty book by typing `touch book`."
+    You can create an empty book by typing `touch book`.
 items:
   lectern:
     name:
-      es: "atril"
-      en: "lectern"
-  brick.nim:
+      es: atril
+      en: lectern
+    kind: copy
+  brick:
     name:
       es: ladrillo
       en: brick
-    make: "nim c -o:{name} brick.nim"
+    kind: make
+    instr: "nim c -o:brick brick.nim"

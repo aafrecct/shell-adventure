@@ -1,21 +1,32 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: weird_altar_room
+dir_name:
+  es: "sala_del_altar"
+  en: "weird_altar_room"
+desc: A room with a very weird altar
+hidden: false
+locked: true
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Según entras en la sala escuchas una risa aguda que viene de una de las 
+    esquinas de la sala, cuando miras, ves a una mujer mayor agachada mirandote
+    fijamente. En el centro de la sala hay un altar azul marino, alrededor del
+    cual se concentra una enegía extraña.
+  en: |
+    As you enter you notice an old woman laughing quitely, squatting in one of
+    the corners of the room, she's staring at you. In the center of the room,
+    there's a weird deep blue altar with strange enery surrounding it.
+items: 
+  altar:
+    name:
+      es: altar_azul
+      en: weird_altar
+    kind: make
+    instr: "nim c -o:altar altar"
+  old_woman:
+    name:
+      es: vieja
+      en: old_woman
+    kind: make
+    instr: "sudo mknod old_woman 1 0"
+
+

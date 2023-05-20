@@ -1,21 +1,37 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: lock_room_2
+dir_name:
+  es: "sala_con_mecanismo_2"
+  en: "room_with_mechanism_2"
+desc: Second of twin rooms that teach `ln`
+hidden: false
+locked: false
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Estás en una habitación pequeña. A tu derecha un bebedero sobresale de la
+    pared vacío y seco. El olor a humedad no es tan potente en esta habitación. 
+    A veces, de reojo, parece que las paredes del aguamanil se mueven y se 
+    deforman de manera extraña, pero al mirarlo permanece inmóvil.
+  en: | 
+    You find yourself in a small room. To your right there's something like a 
+    stone sink, empty and dry. The smell of humidity isn't as strong here.
+    When you look away the sink seems to shift and change shape out of the
+    corner of your eye, yet it looks immobile when you stare at it.
+items: 
+  sink:
+    name:
+      es: bebedero
+      en: stone_sink
+    kind: make
+    instr: "touch sink"
+  clue:
+    name:
+      es: .pista
+      en: .clue
+    kind: content
+    content:
+      es: | Para vincular dos archivos usa `ln -sr <fuente> <copia>`.
+        -s hace el vinculo simbólico
+        -r lo hace relativo
+      en: | To link two files use `ln -sr <source> <copy>`
+        -s makes the link symbolic
+        -r makes it relative

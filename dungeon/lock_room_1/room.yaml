@@ -1,21 +1,25 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: lock_room_1
+dir_name:
+  es: "sala_con_mecanismo_1"
+  en: "room_with_mechanism_1"
+desc: First of twin rooms that teach `ln`
+hidden: false
+locked: true
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Estás en una habitación pequeña con una puerta en frente. A tu derecha un 
+    bebedero sobresale de la pared, lleno un agua que gotea del techo y parece
+    salir de las paredes. Si miras atentamente, parece que hubiera algo en el
+    agua. Una contraseña? No, parecen ser palabras.
+  en: |
+    You find yourself in a small room with another door in front of you. To
+    your right something like a stone sink collects the water coming from
+    the roof and the walls. If you look closely, the water produces some strange
+    shapes. A password of sorts? Or perhaps a passphrase.
+items: 
+  sink:
+    name:
+      es: bebedero
+      en: stone_sink
+    kind: make
+    instr: "./passphrase > sink"

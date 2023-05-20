@@ -1,21 +1,47 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: a_dead_end
+dir_name: 
+  es: "sala_sin_salida"
+  en: "a_dead_end"
+desc: Matter is neither created nor destroyed
+hidden: true
+locked: false
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Entras en una habitación sin salida con dos faroles en la pared de 
+    enfrente. Uno de los dos faroles está encendido, el otro no.
+  en: |
+    You enter a room with no apparent exit. There are two lanterns in the 
+    wall opposite you, one lit, the other one not.
+items:
+  writings_on_the_wall:
+    name:
+      es: "escritura_en_la_pared"
+      en: "writings_on_the_wall"
+    kind: content
+    content:
+      es: |
+        Cuando una luz no revela el camino,
+        dos veces la misma llama,
+        como amParo divino,
+        ruta a la oscuridad clama
+      en: |
+        if one Can't light the way,
+        then two must be the aim,
+        yet if two come out to Play,
+        both must burn the same
+  left_lantern:
+    name:
+      es: "farol_izquierdo"
+      en: "left_lantern"
+    kind: copy
+  right_lantern:
+    name:
+      es: "farol_derecho" 
+      en: "right_lantern"
+    kind: copy
+  left_flame:
+    name:
+      es: "llama_izquierda"   
+      en: "left_flame"
+    kind: make
+    instr: "dd if=/dev/urandom of=left_flame bs=1024 count=10"

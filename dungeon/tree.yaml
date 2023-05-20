@@ -1,4 +1,4 @@
-dungeon:
+locked:
 - entrance:
   - first_room
   - large_room: 

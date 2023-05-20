@@ -3,31 +3,25 @@ dir_name:
   es: "sala_grande"
   en: "large_room"
 desc: Teaches `less` and locked doors.
+hidden: false
+locked: false
 narrative:
-  es: >
-    "Esta sala es mucho más grande, un gran cuadro de un calamar gigante cuelga
+  es: |
+    Esta sala es mucho más grande, un gran cuadro de un calamar gigante cuelga
     de la pared norte y una gran mesa de madera reside en el centro, ya vieja
-    y pútrida. Hay tres puertas, además de por la que acabas de entrar, dos
+    y pútrida. Hay tres puertas además de por la que acabas de entrar, dos
     de ellas cerradas, puedes intentar abrirlas.
-    |vspace|
+    Puedes pulsar `q` para salir de less.
+    $vspace
     Esta sala es mucho más grande, hay más cosas aquí. Para ver este archivo
-    desde el principio usa `less`."
-  en: >
-    "This room is much larger, a big painting of a giant squid hangs from the
+    desde el principio usa `less`. 
+  en: |
+    This room is much larger, a big painting of a giant squid hangs from the
     north wall and a big wooden table rots away in the center of the room.
     There's tree doors ahead of you, two of them seem tightly sealed, though
     you could try opening them.
-    |vspace|
+    You can use `q` to exit less.
+    $vspace
     This room is much larger, there are more things to look at. To read this
-    file from the begining type `less`."
-leads_to: 
-  lone_room:
-    hidden: false
-    locked: false
-  stand_room:
-    hidden: false
-    locked: true
-  weight_room:
-    hidden: false
-    locked: true
-
+    file from the begining type `less`.
+items: {}

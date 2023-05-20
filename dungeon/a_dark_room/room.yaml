@@ -1,21 +1,24 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: a_dark_room
+dir_name:
+  es: "una_habitacion_oscura"
+  en: "a_dark_room"
+desc: Intertextuality
+hidden: false
+locked: false
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Apareces en *una habitacion oscura* sin rastro del portal. Si te sientes
+    un poco desorientado/a puedes usar `whoami` para  recordar tu nombre.
+    ¿No sabes si hay alguien más en la mazmorra? Puedes usar `who` para ver
+    todos los usuarios conectados. Si quieres saber que queda por delante
+    puedes usar `du .`.
+    No hay pistas para abrir la puerta, puede que el nombre de la habitación
+    contenga alguna?
+  en: |
+    You appear in *a dark room*, no trace of the portal. If you fell slightly
+    disoriented you can use `whoami` to remember who you are. ¿Wanna know who
+    else is here? Type `who` to see all online users. You're in an unknown
+    place now you can use `du .` to see what's ahead of you.
+    No clear clues for opening this door though, maybe the room name sounds
+    familiar?
+items: {}

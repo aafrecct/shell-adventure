@@ -1,21 +1,47 @@
-name: Entrace
-dir_name: entrance,
-desc: The first room, teaches `cd`
+id: second_floor
+dir_name:
+  es: "segundo_piso"
+  en: "second_floor"
+desc: This dungeon is a duplex?
+hidden: false
+locked: false
 narrative:
-  es: >
-    Te encuentras en una sala oscura, hay un aura extraña en la mazmorra,
-    huele ligeramente a |mar y a alga|. Hay una puerta entreabierta a tu
-    derecha, puede que haya algo dentro. Haz `cd first_room` para entrar en la
-    siguiente habitación.
-  en: >
-    You find yourself in a dark room, the dungeon emanates a weird aura, a
-    smell of seaweed seeps through the floor. There's a door to your left,
-    ajar. To go through please type `cd first_room`.
-    },
-leads_to: 
-  - dirname: first_room
-    hidden: false
-    locked: false
-  - dirname: large_room
-    hidden: false
-    locked: false
+  es: |
+    Estas en una habitación amplia, hay pequeños charcos en el suelo y
+    algunos ladrillos parecen parcialmente cubiertos de algas. En una de las
+    paredes la piedra ha sido tallada crando un gran dibujo de una tortuga
+    marina. Cerca de la tortuga, un ladrillo sobresale de la pared.
+    En la pared opuesta está la única puerta de la habitación y una estatua
+    de una figura encapuchada sujetando un cuenco de piedra como ofrenda a
+    alguien.
+  en: |
+    You are in a large room with small puddles in the floor. Some of the 
+    stone bricks in the floor are partially covered by algae. In one of the
+    walls a large picture of a sea turtle is carved in the stone. Near the
+    the turtle, a brick sticks out of the wall.
+    On the opposite side of the room there's a statue of a cloaked figure
+    offering an empty stone bowl to someone. Next to it, the only door of the room.
+items:
+  brick:
+    name:
+      es: ladrillo
+      en: brick
+    kind: make
+    instr: "nim c -o:brick brick.nim"
+  turtle:
+    name: 
+      es: tortuga_marina
+      en: sea_turtle
+    kind: make
+    instr: "nim c -o:turtle turtle.nim"
+  statue:
+    name:
+      es: estatua
+      en: statue
+    kind: copy
+  stone_bowl:
+    name:
+      es: cuenco_de_piedra
+      en: stone_bowl
+    kind: make
+    instr: "touch stone_bowl"
