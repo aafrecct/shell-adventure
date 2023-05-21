@@ -9,7 +9,7 @@ var
   wrongRoomText: string
   currentRoom: string = splitPath(getCurrentDir()).tail
 
-if getEnv("DUNGEON_LANG", "es") == "es":
+if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "sala_atril"
   expectedFileName = "libro"
   nextRoomDir = "../sala_balanza"

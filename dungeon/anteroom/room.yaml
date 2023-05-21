@@ -21,4 +21,4 @@ items:
       es: ladrillo
       en: brick
     kind: make
-    make: "nim c -o:brink brink.nim"
+    instr: "nim c -o:brick brick.nim"

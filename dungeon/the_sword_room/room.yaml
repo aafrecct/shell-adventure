@@ -26,5 +26,5 @@ items:
       es: espada
       en: sword
     kind: make
-    instr: "nim c -o:sword sword.nim && chmod 744 sword && chown root:root sword"
+    instr: "nim c -o:sword sword.nim && chmod 744 sword"
 

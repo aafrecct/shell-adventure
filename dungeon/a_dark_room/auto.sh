@@ -1,5 +1,5 @@
 
-if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
     next_room_name="la_habitacion_de_la_espada"
     expected_file_name="hoguera"
     alias encender=touch
@@ -14,7 +14,7 @@ check_fire() {
         sleep 1
     done  
     
-    if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+    if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
         echo "La habitación esta caliente. La puerta se abre."
     else
         echo "The room is warm. The door opens."

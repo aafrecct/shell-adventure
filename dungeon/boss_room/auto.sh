@@ -1,4 +1,4 @@
-if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
   ./jefe_final
 else
   ./final_boss

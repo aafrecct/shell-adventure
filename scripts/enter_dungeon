@@ -1,7 +1,0 @@
-#!/bin/bash
-
-export SHELL_ADVENTURE_SCRIPTS=$PWD/scripts
-alias cd="source $SHELL_ADVENTURE_SCRIPTS/cd"
-./scripts/build_dungeon
-cd locked/entrance
-chmod -x ..

@@ -9,24 +9,32 @@ narrative:
   es: |
     Según entras en la sala escuchas una risa aguda que viene de una de las 
     esquinas de la sala, cuando miras, ves a una mujer mayor agachada mirandote
-    fijamente. En el centro de la sala hay un altar azul marino, alrededor del
-    cual se concentra una enegía extraña.
+    fijamente. Probablemente no sea peligrosa, pero puedes encerrarla en su 
+    propia habitación. Crea una nueva sala con `mkdir <nombre>` y muevela con
+    `mv <origen> <destino>`
+
+    En el centro de la sala hay un altar azul marino, alrededor del cual se 
+    concentra una enegía extraña.
   en: |
     As you enter you notice an old woman laughing quitely, squatting in one of
-    the corners of the room, she's staring at you. In the center of the room,
-    there's a weird deep blue altar with strange enery surrounding it.
+    the corners of the room, she's staring at you. She's probably not dangerous
+    but you can get her out of the room by creating a new room with 
+    `mkdir <name>` and move her into it with `mv`.
+
+    In the center of the room, there's a weird deep blue altar with strange 
+    energy surrounding it.
 items: 
   altar:
     name:
       es: altar_azul
       en: weird_altar
     kind: make
-    instr: "nim c -o:altar altar"
+    instr: "nim c -o:altar altar.nim"
   old_woman:
     name:
       es: vieja
       en: old_woman
     kind: make
-    instr: "sudo mknod old_woman 1 0"
+    instr: "nim c -o:old_woman old_woman.nim"
 
 

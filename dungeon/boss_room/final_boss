@@ -15,6 +15,7 @@ else
 fi
 
 trap "sleep 1; echo $finalLine" EXIT
+trap "sleep 1; echo $finalLine" SIGINT
 
 while true; do
   for i in {1..20}; do

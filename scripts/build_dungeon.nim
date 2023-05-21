@@ -49,41 +49,42 @@ proc createRoom(path: var seq[string], room_id: string) =
   var 
     room: Room
     roomDescYaml = newFileStream(fmt"dungeon/{room_id}/room.yaml")
+    dirName: string
 
   load(roomDescYaml, room)
 
   case room.hidden:
     of true:
-      path.add(fmt".{room.dir_name[lang]}")
+      dirName = fmt".{room.dir_name[lang]}"
     of false:
-      path.add(room.dir_name[lang])
+      dirName = room.dirName[lang]
+
+  path.add(dirName)
   
   var roomPath = path.join("/")
   createDir(roomPath)
 
   
   writeFile(fmt("{path.join(\"/\")}/desc"), room.narrative[lang] % ["vspace", vspace])
-  copyFile(fmt"dungeon/{room_id}/auto.sh", fmt"scripts/rooms/{room_id}.sh")
+  copyFile(fmt"dungeon/{room_id}/auto.sh", fmt"scripts/rooms/{dirName}.sh")
       
   for item_id, item in room.items.pairs():
     case item.kind:
       of ItemKind.copy:
-        copyFile(fmt"dungeon/{room_id}/{item_id}", fmt"{roomPath}/{item.name[lang]}")
+        copyFileWithPermissions(fmt"dungeon/{room_id}/{item_id}", fmt"{roomPath}/{item.name[lang]}")
       of ItemKind.make:
         discard execCmdEx(item.instr, workingDir=fmt"dungeon/{room_id}")
-        copyFile(fmt"dungeon/{room_id}/{item_id}", fmt"{roomPath}/{item.name[lang]}")
+        moveFile(fmt"dungeon/{room_id}/{item_id}", fmt"{roomPath}/{item.name[lang]}")
       of ItemKind.content:
         writeFile(fmt"{roomPath}/{item.name[lang]}", item.content[lang])
-    discard
 
   if room.locked:
     lockedRooms.add(roomPath)
 
   echo fmt"Created room {roomPath}"
 
-
-putEnv("DUNGEON_LANG", $lang)
 createDir("scripts/rooms")
+createDir("visited")
 
 while nextEvent.kind != yamlEndStream:
   case nextEvent.kind

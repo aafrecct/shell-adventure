@@ -13,7 +13,7 @@ var
   wrongRoomText: string
   currentRoom: string = splitPath(getCurrentDir()).tail
 
-if getEnv("DUNGEON_LANG", "es") == "es":
+if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "segundo_piso"
   expectedFileName = "cuenco_de_piedra"
   expectedExecName = "./tortuga_marina"

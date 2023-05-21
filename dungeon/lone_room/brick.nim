@@ -7,17 +7,16 @@ var
   failText: string
   currentRoom: string = splitPath(getCurrentDir()).tail
 
-if getEnv("DUNGEON_LANG", "es") == "es":
+if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "sala_solitaria"
   nextRoomDir = "../sala_atril"
   successText = "Se oye un *click* en la habitación de al lado."
   failText = "El ladrillo no está en esta habitación."
 else:
   expectedCurrentRoom = "lone_room"
-  nextRoomDir = "../stand_room"
+  nextRoomDir = "../lectern_room"
   successText = "You hear a click coming from the other room."
   failText = "The brick is not in this room."
-
 
 if currentRoom == expectedCurrentRoom:
   let openPermissions = {

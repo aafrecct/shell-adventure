@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
     room_name="una_habitacion_oscura"
 else
     room_name="a_dark_room"

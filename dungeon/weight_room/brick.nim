@@ -9,7 +9,7 @@ var
   wrongRoomText: string
   currentRoom: string = splitPath(getCurrentDir()).tail
 
-if getEnv("DUNGEON_LANG", "es") == "es":
+if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "sala_balanza"
   knownFilesList = @["desc", "ladrillo", "balanza", "pasillo_vacio"]
   nextRoomDir = "./pasillo_vacio"
@@ -17,7 +17,7 @@ if getEnv("DUNGEON_LANG", "es") == "es":
   failText = "La balanza se mueve misteriosamente y vuelve a su posición original."
   wrongRoomText = "El ladrillo no está en esta habitación."
 else:
-  expectedCurrentRoom = "lectern_room"
+  expectedCurrentRoom = "scales_room"
   knownFilesList = @["desc", "brick", "scales", "empty_hallway"]
   nextRoomDir = "./empty_hallway"
   successText = "You hear a click coming from the door in from of you."

@@ -15,4 +15,16 @@ narrative:
     Behind the door theres a small room with a water fountain in one of the
     corners. There are also several vases on the floor, many of them broken.
     You can see everything there's on the room typing `ls`.
-items: {}
+items: 
+  vases:
+    name:
+      es: jarrones
+      en: vases
+    kind: content
+    content:
+      es: |
+        <>     
+        () _ . \_/ , _
+      en: |
+        <>     
+        () _ . \_/ , _

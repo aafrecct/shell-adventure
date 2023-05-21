@@ -10,10 +10,10 @@ narrative:
     Te encuentras en una sala pequeña con paredes de piedra y suelo de madera,
     a tu derecha hay una puerta entreabierta. Un olor a humedad y algas se
     cuela entre las tablas del suelo. Para investigar la sala a tu derecha
-    escribe: `cd first_room`.
+    escribe: `cd sala_fuente`.
   en: | 
     You find yourself in a small room with cobblestone walls and an old wooden
     floor, a musty smell seeps though the cracks in the floor, almost of rotten
     fish. There's a door to your left, ajar, to go through to the next room,
-    type: `cd first_room`.
+    type: `cd fountain_room`.
 items: {}

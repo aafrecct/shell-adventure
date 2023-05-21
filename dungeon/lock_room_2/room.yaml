@@ -29,9 +29,13 @@ items:
       en: .clue
     kind: content
     content:
-      es: | Para vincular dos archivos usa `ln -sr <fuente> <copia>`.
+      es: | 
+        Para vincular dos archivos usa `ln -srf <fuente> <copia>`.
         -s hace el vinculo simbólico
         -r lo hace relativo
-      en: | To link two files use `ln -sr <source> <copy>`
+        -f fuerza la creación del vinculo incluso si ya existe un archivo <copia>
+      en: | 
+        To link two files use `ln -srf <source> <copy>`
         -s makes the link symbolic
         -r makes it relative
+        -f forces the creation of the link even if the <copy> file already exists
