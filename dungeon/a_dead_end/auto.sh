@@ -2,12 +2,16 @@
 
 if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
     second_floor_name="segundo_piso"
+    left_flame_file="llama_izquierda"
+    right_flame_file="llama_derecha"
 else
     second_floor_name="second_floor"
+    left_flame_file="left_flame"
+    right_flame_file="right_flame"
 fi
 
 check_flame() {
-    while ! $(cmp --silent left_flame right_flame); do
+    while ! $(cmp --silent $left_flame_file $right_flame_file); do
         sleep 1
     done  
     

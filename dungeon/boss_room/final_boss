@@ -20,7 +20,7 @@ fi
 
 i=0
 
-trap "sleep 1; echo $finalLine; touch .stop" SIGINT
+trap "sleep 1; echo '$finalLine'; touch .stop" SIGINT
 
 while ! [ -f ".stop" ]; do
   i=$(expr $i + 1)

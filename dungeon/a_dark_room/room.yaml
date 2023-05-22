@@ -10,15 +10,13 @@ narrative:
     Apareces en *una habitacion oscura* sin rastro del portal. Si te sientes
     un poco desorientado/a puedes usar `whoami` para  recordar tu nombre.
     ¿No sabes si hay alguien más en la mazmorra? Puedes usar `who` para ver
-    todos los usuarios conectados. Si quieres saber que queda por delante
-    puedes usar `du .`.
+    todos los usuarios conectados.
     No hay pistas para abrir la puerta, puede que el nombre de la habitación
     contenga alguna?
   en: |
     You appear in *a dark room*, no trace of the portal. If you fell slightly
     disoriented you can use `whoami` to remember who you are. ¿Wanna know who
-    else is here? Type `who` to see all online users. You're in an unknown
-    place now you can use `du .` to see what's ahead of you.
+    else is here? Type `who` to see all online users. 
     No clear clues for opening this door though, maybe the room name sounds
     familiar?
 items: {}

@@ -1,12 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
 if [[ $(ps -ho cmd $$) != *"bash"* ]]; then
   echo "Please use bash. No other shells are supported."
-  exit 1
 elif [ -d "locked" ] || [ -d "cerrado" ]; then
   echo "Please delete the dungeon before regenerating it."
-  echo "You can use \`sudo rm -rf locked\` but be careful."
-  exit 1
+  echo "You can use \`sudo rm -rf locked visited\` but be careful."
 else
   export SHELL_ADVENTURE_SCRIPTS=$PWD/scripts
   export SHELL_ADVENTURE_ROOT=$PWD

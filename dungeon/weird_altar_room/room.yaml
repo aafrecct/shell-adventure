@@ -8,7 +8,7 @@ locked: true
 narrative:
   es: |
     Según entras en la sala escuchas una risa aguda que viene de una de las 
-    esquinas de la sala, cuando miras, ves a una mujer mayor agachada mirandote
+    esquinas, cuando miras, ves a una mujer mayor agachada mirandote
     fijamente. Probablemente no sea peligrosa, pero puedes encerrarla en su 
     propia habitación. Crea una nueva sala con `mkdir <nombre>` y muevela con
     `mv <origen> <destino>`

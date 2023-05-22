@@ -8,8 +8,8 @@ locked: true
 narrative:
   es: |
     ¡Llegaste al final! ¡Gracias por juegar!
-    Puedes utilizar todo lo aprendido .
-    To remove it you can use `sudo rm -rf`
+    Puedes utilizar todo lo aprendido.
+    Para borrar la mazmorra puedes usar `sudo rm -rf`
   en: |
     This is the end! Thanks for playing!
     You can now exit the dungeon with what you've learn.

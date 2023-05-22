@@ -2,8 +2,10 @@
 
 if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
     room_name="una_habitacion_oscura"
+    locked_room="cerrado"
 else
     room_name="a_dark_room"
+    locked_room="locked"
 fi
 
-cd $SHELL_ADVENTURE_ROOT/locked/$room_name
+cd $SHELL_ADVENTURE_ROOT/$locked_room/$room_name

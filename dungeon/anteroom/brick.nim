@@ -34,7 +34,7 @@ changes in the other, forever in sync."""
 if currentRoom == expectedCurrentRoom:
   let
     isLink = symlinkExists(expectedLinkName)
-    linkToRightFile = isLink and expandSymLink(expectedLinkName) == expectedFileName
+    linkToRightFile = isLink and absolutePath(expandSymLink(expectedLinkName)) == absolutePath(expectedFileName)
   if isLink and linkToRightFile:
     let openPermissions = {
       FilePermission.fpUserExec,

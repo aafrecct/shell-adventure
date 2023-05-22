@@ -8,7 +8,7 @@ locked: true
 narrative:
   es: |
     Todas la historias son adaptaciones de otras historias.
-    Una espada yace, semi-enterrada en el suelo, enfrente de ti.
+    Una espada yace, semi-enterrada en el suelo, ante ti.
     Solo su verdadero dueño o dueña puede desenterrarla. ¿Serás tú?
     Puedes cambiar el dueño de un archivo con el comando `chown` pero puede
     que tengas que hacer de administrador para ello. Puedes obtener permisos

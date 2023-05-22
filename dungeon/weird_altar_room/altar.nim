@@ -20,7 +20,7 @@ let letters = "abcdefghijklmnopqrstuvwxyz"
 
 if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "sala_del_altar"
-  nextRoomDir = "./portal_room"
+  nextRoomDir = "./sala_del_portal"
   keywordsList = @["primero", "patito", "bronce", "muerte", "uve", "shell"]
   personFileName = "vieja"
   personStillInRoomText = """Este altar puede ayudarte a abrir la puerta, pero solo funciona si 
