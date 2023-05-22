@@ -8,5 +8,7 @@ else
   if ! [ -f "$SHELL_ADVENTURE_ROOT/visited/$room_name" ] ; then 
       touch "$SHELL_ADVENTURE_ROOT/visited/$room_name"
       source $SHELL_ADVENTURE_SCRIPTS/rooms/$room_name.sh
+  else
+    echo WTF
   fi
 fi

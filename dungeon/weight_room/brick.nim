@@ -20,7 +20,7 @@ else:
   expectedCurrentRoom = "scales_room"
   knownFilesList = @["desc", "brick", "scales", "empty_hallway"]
   nextRoomDir = "./empty_hallway"
-  successText = "You hear a click coming from the door in from of you."
+  successText = "You hear a click coming from the door in front of you."
   failText = "The scales move slighly on their own then go back to a neutral position."
   wrongRoomText = "The brick is not in this room."
 

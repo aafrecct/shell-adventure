@@ -14,17 +14,12 @@ narrative:
   en: |
     Behind the door theres a small room with a water fountain in one of the
     corners. There are also several vases on the floor, many of them broken.
-    You can see everything there's on the room typing `ls`.
+    You can see everything there's on the room typing `ls`. Remember all
+    rooms have 1 more door that you might no be able to see, the one you
+    entered through. To go back a room, type `cd ..`.
 items: 
   vases:
     name:
       es: jarrones
       en: vases
-    kind: content
-    content:
-      es: |
-        <>     
-        () _ . \_/ , _
-      en: |
-        <>     
-        () _ . \_/ , _
+    kind: copy

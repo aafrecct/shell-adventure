@@ -113,7 +113,8 @@ while nextEvent.kind != yamlEndStream:
     else:
       discard events.next()
   nextEvent = events.peek()
-
-for r_index in lockedRooms.high..lockedRooms.low:
-  lockedRooms[r_index].setFilePermissions({})
 dungeonTreeYaml.close()
+
+for r_index in countdown(lockedRooms.high, lockedRooms.low):
+  lockedRooms[r_index].setFilePermissions({})
+

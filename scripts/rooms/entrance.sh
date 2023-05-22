@@ -1,4 +1,4 @@
-echo 
+sleep 1
 
 if [[ "$SHELL_ADVENTURE_LANG" == "es" ]]; then
     echo "Has entrado en una mazmorra oscura, es dificil ver que hay en esta 
@@ -8,5 +8,4 @@ else
 room. To read a description for every room you enter type \`cat desc\`"
 fi
 
-echo
 sleep 1

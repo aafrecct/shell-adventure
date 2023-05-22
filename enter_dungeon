@@ -3,30 +3,39 @@
 if [[ $(ps -ho cmd $$) != *"bash"* ]]; then
   echo "Please use bash. No other shells are supported."
   exit 1
-elif [ -d "locked" ]; then
+elif [ -d "locked" ] || [ -d "cerrado" ]; then
   echo "Please delete the dungeon before regenerating it."
   echo "You can use \`sudo rm -rf locked\` but be careful."
   exit 1
+else
+  export SHELL_ADVENTURE_SCRIPTS=$PWD/scripts
+  export SHELL_ADVENTURE_ROOT=$PWD
+  export SHELL_ADVENTURE_LANG=${LANG:0:2}
+  alias cd="source $SHELL_ADVENTURE_SCRIPTS/cd"
+
+  nim c -o:./scripts/build_dungeon ./scripts/build_dungeon.nim
+  ./scripts/build_dungeon
+
+  if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
+    sudo chown root:root ./cerrado/una_habitacion_oscura/la_habitacion_de_la_espada/espada
+    roomlocked="cerrado"
+    roomstart="entrada"
+  else
+    sudo chown root:root ./locked/a_dark_room/the_sword_room/sword
+    roomlocked="locked"
+    roomstart="entrance"
+  fi
+
+  clear
+  for i in {1..6}; do
+    sleep .5
+    echo "o   *pat*"
+    sleep .5
+    echo " o  *pat*"
+  done
+
+  pushd $roomlocked > /dev/null && \
+  chmod 111 . && \
+  pushd $roomstart > /dev/null && \
+  source $SHELL_ADVENTURE_SCRIPTS/rooms/$roomstart.sh
 fi
-
-export SHELL_ADVENTURE_SCRIPTS=$PWD/scripts
-export SHELL_ADVENTURE_ROOT=$PWD
-export SHELL_ADVENTURE_LANG=${LANG:0:2}
-alias cd="source $SHELL_ADVENTURE_SCRIPTS/cd"
-
-nim c -o:./scripts/build_dungeon ./scripts/build_dungeon.nim && \
-./scripts/build_dungeon && \
-sudo chown root:root ./locked/a_dark_room/the_sword_room/sword
-
-clear
-for i in {1..20}; do
-  sleep .1
-  printf "/%.0s" {0..100}
-  echo
-  sleep .1
-  printf "\\%.0s" {0..100}
-  echo
-done
-
-cd locked/entrance && chmod 111 ..
-

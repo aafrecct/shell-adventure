@@ -14,14 +14,14 @@ narrative:
     Puedes pulsar `q` para salir de less.
     $vspace
     Esta sala es mucho más grande, hay más cosas aquí. Para ver este archivo
-    desde el principio usa `less`. 
+    desde el principio usa `less desc`. 
   en: |
     This room is much larger, a big painting of a giant squid hangs from the
     north wall and a big wooden table rots away in the center of the room.
-    There's tree doors ahead of you, two of them seem tightly sealed, though
+    There's three doors ahead of you, two of them seem tightly sealed, though
     you could try opening them.
     You can use `q` to exit less.
     $vspace
     This room is much larger, there are more things to look at. To read this
-    file from the begining type `less`.
+    file from the begining type `less desc`.
 items: {}

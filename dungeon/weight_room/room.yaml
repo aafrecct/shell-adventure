@@ -21,12 +21,13 @@ narrative:
     texto que quieras, pero mejor si no sales de la terminal. 
 
     (Si no sabes qué hacer, o estas a punto buscar Word, prueba a escribir 
-    `nano` o `vi` o `vim`, suerte aprendiendo a utilizarlos.)
+    `nano` o `vi` o `vim`, suerte aprendiendo a utilizarlos. Puedes usar
+    `man <cmd>` para obtener ayuda sobre como usar un comando.)
   en: |
-    This room seems identical to the lectern one but there''s an apparently
+    This room seems identical to the lectern one but there's an apparently
     closed door in the wall in front of you.
 
-    You can see more details about the items in a room by typing `ln -l`. Try
+    You can see more details about the items in a room by typing `ls -l`. Try
     to figure out the difference between a closed door and an open one.
 
     There is also an old scale in the middle of the room, an empty item
@@ -36,7 +37,8 @@ narrative:
     use something from the terminal.
 
     (If you have no clue what to do, you can try typing `nano` or `vi` or 
-    `vim`, good luck figuring them out.)'
+    `vim`, good luck figuring them out. You can use `man <cmd>` to get help
+    about a certain command)'
 items:
   scales:
     name:
