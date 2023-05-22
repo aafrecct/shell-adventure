@@ -30,8 +30,7 @@ solo hay una persona en la sala.
 y para usarlo necesitaras filtrarla. El altar solo responde ante ciertas palabras
 puede que puedas encontrarlas en un trozo de magia aleatoria.
 Para pasar el output de un comando como input al siguiente, conectalos con `|`.
-Puedes filtrar texto con el comando `grep`. Para interpretar la magia puedes
-usar `expr`.
+Puedes filtrar texto con el comando `grep`.
   """
   keywordsResponse = @[
     "s",
@@ -48,14 +47,14 @@ else:
   nextRoomDir = "./portal_room"
   keywordsList = @["first", "duck", "bronze", "death", "vee", "shell"]
   personFileName = "old_woman"
-  personStillInRoomText = """This altar might be able to open the doot, but it only works
+  personStillInRoomText = """This altar might be able to open the door, but it only works
 when there is only one person in the room.
   """
-  noArgsText = """This altar doesn't just work, it's magic is wild and random so you
+  noArgsText = """This altar doesn't just work, its magic is wild and random so you
 might need to filter it first. The altar answers only to a certain set of words
 you might be able to get what they are from a piece of random magic.
 You can pipe the output of one command to another by joining them with `|`.
-You can filter text with `grep`. You can use `expr` to interpret the magic.
+You can filter text with `grep`.
   """
   keywordsResponse = @[
     "s",

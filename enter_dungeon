@@ -29,13 +29,16 @@ else
   clear
   for i in {1..6}; do
     sleep .5
-    echo "o   *pat*"
+    echo "o   
+O        *pat*"
     sleep .5
-    echo " o  *pat*"
+    echo "    o
+    O     *pat*"
   done
 
   pushd $roomlocked > /dev/null && \
   chmod 111 . && \
   pushd $roomstart > /dev/null && \
-  source $SHELL_ADVENTURE_SCRIPTS/rooms/$roomstart.sh
+  source $SHELL_ADVENTURE_SCRIPTS/rooms/$roomstart.sh && \
+  touch $SHELL_ADVENTURE_ROOT/visited/$roomstart
 fi

@@ -1,34 +1,49 @@
 #!/bin/bash
 
-if [ $SHELL_ADVENTURE_LANG -eq "es"]; then
+if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
   trappedLine1="no puedes esCapar"
   trappedLine2="no saldrás de aquí"
   trappedLine3="ríndete"
   trappedLine4="acepta mi CONTROL"
-  finalLine="cobaRde! Matame si puedes!"
+  finalLine="
+
+cobaRde! Matame si puedes!"
 else
   trappedLine1="you're trapped"
   trappedLine2="you Can't escape"
   trappedLine3="you will remain here"
   trappedLine4="i have CONTROL"
-  finalLine="kill me coward! ReMove me!"
+  finalLine="
+
+kill me coward! ReMove me!"
 fi
 
-trap "sleep 1; echo $finalLine" EXIT
-trap "sleep 1; echo $finalLine" SIGINT
+i=0
 
-while true; do
-  for i in {1..20}; do
-    echo $trappedLine1
-  done
-  for i in {1..20}; do
-    echo $trappedLine2
-  done
-  for i in {1..20}; do
-    echo $trappedLine3
-  done
-  for i in {1..20}; do
-    echo $trappedLine4
-  done
+trap "sleep 1; echo $finalLine; touch .stop" SIGINT
+
+while ! [ -f ".stop" ]; do
+  i=$(expr $i + 1)
+  case $i in
+    1)
+      echo $trappedLine1
+      sleep .1
+      ;;
+    2)
+      echo $trappedLine2
+      sleep .1
+      ;;
+    3)
+      echo $trappedLine3
+      sleep .1
+      ;;
+    4)
+      echo $trappedLine4
+      sleep .1
+      ;;
+    *)
+      i=0
+      ;;
+  esac
 done
 
