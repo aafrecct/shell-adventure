@@ -23,4 +23,6 @@ check_fire() {
     chmod 755 $next_room_name
 }
 
+unalias who
+unalias whoami
 check_fire &

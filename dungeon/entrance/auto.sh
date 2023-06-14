@@ -9,4 +9,7 @@ room. To read a description for every room you enter type \`cat desc\`"
 fi
 
 echo
+
+unalias ls
+unalias cat
 sleep 1

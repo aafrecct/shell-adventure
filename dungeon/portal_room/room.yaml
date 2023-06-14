@@ -9,13 +9,39 @@ narrative:
   es: |
     La luz de un portal alumbra una sala minuscula.
     Un portal no es una sala. Tienes que hacerlo parte de tí.
-    Para entrar puedes usar `source`.
+    Para entrar puedes usar `source`. Si prefieres entender lo que estas
+    haciendo antes de meterte en un portal a lo mejor hay algo más en la
+    habitación.
   en: |
-    TODO
+    The room is lit by a misterious portal. A portal is, of course,
+    not a room, so you can't just `cd` into it. You have to be one
+    with it. You can do that with `source`. If you wanna know what
+    source does maybe there's something in the room with an explanation.
 items: 
   portal:
     name:
       es: portal
       en: portal
     kind: copy
-
+  book:
+    name:
+      es: libro
+      en: book
+    kind: content
+    content:
+      es: |
+        Cuando ejecutas un archivo desde la terminal, tu shell crea un nuevo
+        proceso completamente separado de tu shell, excepto por el hecho de que
+        tu shell suele esperar a que termine sin dejarte hacer nada.
+        En general decimos que se ejecuta en una 'subshell'.
+        `source` ejectuta un script sin abrir una subshell, pero solo entiende
+        el propio lenguaje de la shell. Esto permite que un script modifique tu
+        shell. Source se utiliza para activar entornos virtuales, o para cargar
+        archivos como tu `.bashrc`.
+      en: |
+        When you execute a file from your shell, a new process is created, separate
+        from your shell. Your shell does usually stay idle until that process dies
+        but nothing else. We call this opening a 'subshell'.
+        `source` executes a script, written in your shell language, but doesn't
+        open a subshell so it's allowed to change you shell process. It's generally
+        used to activate virtual enviroments, or to load your `.bashrc`.

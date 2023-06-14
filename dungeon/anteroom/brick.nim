@@ -13,7 +13,7 @@ var
 if getEnv("SHELL_ADVENTURE_LANG", "es") == "es":
   expectedCurrentRoom = "antesala"
   expectedLinkName = "./sala_con_mecanismo_2/bebedero"
-  expectedFileName = "../bebedero"
+  expectedFileName = "../../bebedero"
   nextRoomDir = "./sala_del_altar"
   successText = "Se oye un *click* que viene de la puerta."
   failText = """Se escuchan sonidos de agua cayendo, tras un momento, cesan.
@@ -34,7 +34,7 @@ changes in the other, forever in sync."""
 if currentRoom == expectedCurrentRoom:
   let
     isLink = symlinkExists(expectedLinkName)
-    linkToRightFile = isLink and absolutePath(expandSymLink(expectedLinkName)) == absolutePath(expectedFileName)
+    linkToRightFile = isLink and expandSymLink(expectedLinkName) == expectedFileName
   if isLink and linkToRightFile:
     let openPermissions = {
       FilePermission.fpUserExec,

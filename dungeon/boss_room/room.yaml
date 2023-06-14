@@ -7,7 +7,7 @@ hidden: false
 locked: true
 narrative:
   es: |
-    ¡Llegaste al final! ¡Gracias por juegar!
+    ¡Llegaste al final! ¡Gracias por jugar!
     Puedes utilizar todo lo aprendido.
     Para borrar la mazmorra puedes usar `sudo rm -rf`
   en: |

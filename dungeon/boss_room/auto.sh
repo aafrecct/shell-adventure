@@ -1,3 +1,5 @@
+unalias rm
+
 if [[ $SHELL_ADVENTURE_LANG == "es" ]]; then
   ./jefe_final
 else

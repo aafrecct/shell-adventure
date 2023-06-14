@@ -1,0 +1,2 @@
+unalias chmod
+unalias chown

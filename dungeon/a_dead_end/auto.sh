@@ -24,4 +24,5 @@ check_flame() {
     mkdir $second_floor_name
 }
 
+unalias cp
 check_flame &

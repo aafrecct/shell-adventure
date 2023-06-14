@@ -4,7 +4,7 @@ if [[ $(ps -ho cmd $$) != *"bash"* ]]; then
   echo "Please use bash. No other shells are supported."
 elif [ -d "locked" ] || [ -d "cerrado" ]; then
   echo "Please delete the dungeon before regenerating it."
-  echo "You can use \`sudo rm -rf locked visited\` but be careful."
+  echo "You might need to use \`sudo rm -rf locked visited\` because of permissions, be careful."
 else
   export SHELL_ADVENTURE_SCRIPTS=$PWD/scripts
   export SHELL_ADVENTURE_ROOT=$PWD
@@ -18,11 +18,28 @@ else
     sudo chown root:root ./cerrado/una_habitacion_oscura/la_habitacion_de_la_espada/espada
     roomlocked="cerrado"
     roomstart="entrada"
+    cmdunavailable="No tienes la fuerza suficiente para usar esto por ahora."
   else
     sudo chown root:root ./locked/a_dark_room/the_sword_room/sword
     roomlocked="locked"
     roomstart="entrance"
+    cmdunavailable="You lack the stregth to use this for now."
   fi
+  
+  alias ls="echo $cmdunavailable"
+  alias cat="echo $cmdunavailable"
+  alias less="echo $cmdunavailable"
+  alias touch="echo $cmdunavailable"
+  alias vim="echo $cmdunavailable"
+  alias nano="echo $cmdunavailable"
+  alias cp="echo $cmdunavailable"
+  alias ln="echo $cmdunavailable"
+  alias who="echo $cmdunavailable"
+  alias whoami="echo $cmdunavailable"
+  alias mv="echo $cmdunavailable"
+  alias rm="echo $cmdunavailable"
+  alias chmod="echo $cmdunavailable"
+  alias chown="echo $cmdunavailable"
 
   clear
   for i in {1..6}; do
